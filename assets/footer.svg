@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="110" viewBox="0 0 1200 110" role="img" aria-labelledby="nk-foot-title">
+  <title id="nk-foot-title">Thanks for visiting</title>
+  <defs>
+    <linearGradient id="nk-foot-bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#070B18"/>
+      <stop offset="0.5" stop-color="#14204A"/>
+      <stop offset="1" stop-color="#070B18"/>
+    </linearGradient>
+    <linearGradient id="nk-foot-line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4C7DFF" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#5CE1E6"/>
+      <stop offset="1" stop-color="#4C7DFF" stop-opacity="0"/>
+    </linearGradient>
+    <path id="nk-foot-wave" d="M0 70 C 150 40, 300 100, 450 70 S 750 40, 900 70 S 1100 100, 1200 70"/>
+    <style>
+      .nk-foot-wave { fill: none; stroke: url(#nk-foot-line); stroke-width: 2; stroke-dasharray: 8 10; animation: nk-foot-flow 12s linear infinite; }
+      @keyframes nk-foot-flow { to { stroke-dashoffset: -360; } }
+      .nk-foot-text { animation: nk-foot-breathe 4s ease-in-out infinite; }
+      @keyframes nk-foot-breathe { 0%, 100% { opacity: .75; } 50% { opacity: 1; } }
+      @media (prefers-reduced-motion: reduce) {
+        .nk-foot-wave, .nk-foot-text { animation: none; }
+        .nk-foot-dot { display: none; }
+      }
+    </style>
+  </defs>
+  <rect width="1200" height="110" rx="14" fill="url(#nk-foot-bg)"/>
+  <use href="#nk-foot-wave" class="nk-foot-wave"/>
+  <circle class="nk-foot-dot" r="4" fill="#5CE1E6"><animateMotion dur="6s" repeatCount="indefinite"><mpath href="#nk-foot-wave"/></animateMotion></circle>
+  <text class="nk-foot-text" x="600" y="44" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="18" fill="#E6ECFF">Thanks for stopping by <tspan fill="#5CE1E6">·</tspan> let's build something reliable</text>
+</svg>
